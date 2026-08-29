@@ -1,0 +1,244 @@
+<!-- ============================================================
+  コホートポータル 表示テンプレート
+   ・サーバー往復は doGet の1回だけ（google.script.run を使わない＝速い）
+   ・内容は全部シート由来。ここは見せ方だけを持つ
+ ============================================================ -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title><?= D.name ?></title>
+<style>
+  :root{
+    --ink:#2b2a26; --sub:#6b6759; --line:#e6e0d4; --bg:#faf8f4; --card:#fff;
+    --gold:#c8912a; --gold-soft:#fdf6e6; --navy:#17233a; --green:#1B5E20;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:system-ui,-apple-system,"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;
+       background:var(--bg);color:var(--ink);line-height:1.7;-webkit-text-size-adjust:100%}
+  a{color:inherit}
+  .bar{background:var(--navy);color:#fff;padding:12px 18px;display:flex;align-items:center;
+       justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .bar .ttl{font-weight:700;font-size:15px;letter-spacing:.02em}
+  .bar .ttl span{color:var(--gold)}
+  /* ttl は左、アバターとマイページボタンは右にまとめる（.bar は space-between） */
+  .me{display:flex;align-items:center;gap:8px;margin-left:auto}
+  .me-av{width:30px;height:30px;border-radius:50%;object-fit:cover;
+         border:2px solid var(--gold);background:#fff;display:block}
+  .me-av-none{display:flex;align-items:center;justify-content:center;
+              background:#f0e6c8;color:var(--navy);font-size:15px;font-weight:700}
+  .me-nick{font-size:13px;font-weight:700;color:#fff;white-space:nowrap;
+           max-width:140px;overflow:hidden;text-overflow:ellipsis}
+  @media (max-width:520px){ .me-nick{display:none} }
+  .mybtn{background:var(--gold);color:#fff;text-decoration:none;font-weight:700;font-size:13px;
+         padding:8px 16px;border-radius:20px;white-space:nowrap}
+  /* token が無いとき（誰か判別できないとき）の案内文 */
+  .barnote{color:#b8c0d0;font-size:11.5px;line-height:1.5}
+  .wrap{max-width:960px;margin:0 auto;padding:18px 16px 64px}
+  .hero{background:var(--gold-soft);border:1px solid #f0e2bd;border-radius:14px;padding:20px 22px;margin-bottom:18px}
+  .hero h1{margin:0 0 6px;font-size:19px;letter-spacing:.01em}
+  .hero p{margin:0;color:#8a6a1e;font-size:14px;white-space:pre-wrap}
+  .hero .cnt{margin-top:10px;font-size:13px;color:var(--sub)}
+  .hero .cnt b{color:var(--gold);font-size:17px}
+  .eyebrow{font-size:11px;letter-spacing:.14em;color:var(--sub);font-weight:700;margin-bottom:8px}
+  .sess{background:var(--card);border:2px solid var(--gold);border-radius:14px;padding:18px 20px;margin-bottom:20px}
+  .sess .no{display:inline-block;background:#eef1f6;color:var(--sub);font-size:11px;
+            padding:2px 9px;border-radius:10px;margin-bottom:6px}
+  .sess h2{margin:0 0 8px;font-size:18px}
+  .sess .meta{font-size:13px;color:var(--sub);display:flex;gap:16px;flex-wrap:wrap}
+  .sess .body{margin-top:10px;font-size:13.5px;color:#4a463c;white-space:pre-wrap}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-bottom:22px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;
+        display:flex;flex-direction:column;gap:8px}
+  .card .btn{display:block;text-align:center;text-decoration:none;font-weight:700;font-size:14px;
+             padding:12px 10px;border-radius:8px;background:var(--navy);color:#fff}
+  .card .btn.g{background:var(--green)}
+  .card .btn.o{background:var(--gold)}
+  .card small{color:var(--sub);font-size:12.5px;display:block}
+  h3.sec{font-size:14px;margin:26px 0 12px;padding-bottom:7px;border-bottom:2px solid var(--line);
+         letter-spacing:.02em}
+  .links{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+  .lk{display:flex;gap:11px;align-items:flex-start;background:var(--card);border:1px solid var(--line);
+      border-radius:10px;padding:13px 15px;text-decoration:none}
+  .lk:hover{border-color:var(--gold)}
+  .lk .ic{font-size:19px;line-height:1.3}
+  .lk b{font-size:14px;display:block}
+  .lk small{color:var(--sub);font-size:12px}
+  /* 会員限定リンク（お試し・未ログインには鍵つきで見せる＝案内も兼ねる） */
+  .card.locked,.lk.locked{opacity:.72;background:#f6f4ef;border-style:dashed}
+  .btn.lock{background:#b9b3a5 !important;cursor:not-allowed}
+  .lk.locked b{color:#7d7768}
+  .chips{display:flex;gap:8px;flex-wrap:wrap}
+  .chip{background:#fff;border:1px solid var(--line);border-radius:16px;padding:6px 13px;font-size:13px}
+  .chip i{color:var(--sub);font-style:normal;font-size:11.5px;margin-left:5px}
+  .up{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  .up div{padding:11px 15px;border-top:1px solid var(--line);font-size:13.5px;
+          display:flex;gap:14px;align-items:baseline;flex-wrap:wrap}
+  .up div:first-child{border-top:0}
+  .up .d{color:var(--gold);font-weight:700;white-space:nowrap}
+  /* これからの道のり（縦のロードマップ） */
+  .road{list-style:none;margin:0;padding:0 0 0 22px;position:relative}
+  .road:before{content:"";position:absolute;left:5px;top:8px;bottom:14px;width:2px;
+               background:linear-gradient(180deg,var(--gold),#e8ddc4)}
+  .road li{position:relative;padding:0 0 18px 4px}
+  .road li:before{content:"";position:absolute;left:-21px;top:6px;width:10px;height:10px;
+                  border-radius:50%;background:#fff;border:2px solid var(--gold)}
+  .road li:first-child:before{background:var(--gold);box-shadow:0 0 0 4px rgba(200,145,42,.16)}
+  .road .rd{color:var(--gold);font-weight:700;font-size:12.5px;letter-spacing:.02em}
+  .road .rt{font-size:14.5px;font-weight:700;margin-top:1px}
+  .road .rg{font-size:12.5px;color:var(--sub);margin-top:2px}
+  .foot{margin-top:34px;text-align:center;color:var(--sub);font-size:11.5px}
+  .empty{color:var(--sub);font-size:13px}
+  @media(max-width:520px){ .wrap{padding:14px 12px 48px} .hero{padding:16px} .sess{padding:15px 16px} }
+</style>
+
+<div class="bar">
+  <div class="ttl">✦ <span><?= D.name ?></span></div>
+  <?
+    // マイページは token（個人ごとの専用URL）が無いと開けない。
+    // token が無いときにボタンを出すと「専用URLから来てください」の
+    // 行き止まりに飛んでしまうので、案内文に切り替える。
+  ?>
+  <? if (viewer && viewer.known) { ?>
+    <div class="me">
+      <? if (viewer.avatar) { ?>
+        <img class="me-av" src="<?= viewer.avatar ?>" alt="">
+      <? } else { ?>
+        <div class="me-av me-av-none">★</div>
+      <? } ?>
+      <span class="me-nick"><?= viewer.nick ?></span>
+    </div>
+  <? } ?>
+  <? if (mypageUrl) { ?>
+    <a class="mybtn" href="<?= mypageUrl ?>" target="_blank">マイページを開く</a>
+  <? } else { ?>
+    <span class="barnote">マイページは、お送りしたメール内のリンクから開けます</span>
+  <? } ?>
+</div>
+
+<div class="wrap">
+
+  <!-- 理念・人数 -->
+  <div class="hero">
+    <h1><?= D.name ?></h1>
+    <? if (D.philosophy) { ?><p><?= D.philosophy ?></p><? } ?>
+    <div class="cnt">参加メンバー <b><?= D.count ?></b> 名</div>
+  </div>
+
+  <!-- 今日 / 次回のセッション -->
+  <? if (D.next) { ?>
+    <div class="sess">
+      <div class="eyebrow"><? if (D.today) { ?>📅 TODAY'S SESSION<? } else { ?>📅 NEXT SESSION<? } ?></div>
+      <? if (D.next.no) { ?><div class="no">第<?= D.next.no ?>回</div><? } ?>
+      <h2><?= D.next.theme ?></h2>
+      <div class="meta">
+        <span>🗓 <?= D.next.label ?></span>
+        <? if (D.next.teacher) { ?><span>👤 <?= D.next.teacher ?></span><? } ?>
+        <? if (D.next.skills) { ?><span>🎯 <?= D.next.skills ?></span><? } ?>
+      </div>
+      <? if (D.next.body) { ?><div class="body"><?= D.next.body ?></div><? } ?>
+    </div>
+  <? } ?>
+
+  <!-- 参加ボタン（大きいカード） -->
+  <div class="cards">
+    <? if (D.next && D.next.zoom) { ?>
+      <div class="card">
+        <a class="btn" href="<?= D.next.zoom ?>" target="_blank">① セッションに参加</a>
+        <small><?= D.next.label ?> のZoom／Meet</small>
+      </div>
+    <? } ?>
+    <!-- 今回のマスの教材（クエストマスタ「関連URL」から引く）
+         URLが未登録のマスではボタンごと出さない（空リンクを出さないため） -->
+    <? if (D.next && D.next.materialUrl) { ?>
+      <div class="card">
+        <a class="btn o" href="<?= D.next.materialUrl ?>" target="_blank">📚 <?= D.next.cell ?> の教材を見る</a>
+        <small>動画・スライド・音声概要・レポート</small>
+      </div>
+    <? } ?>
+    <?
+      // 「① セッションに参加」と同じURLのリンクは出さない。
+      // 昼活とセッションが同じGoogle Meetで開催されるコホートでは、
+      // 同じ行き先のボタンが2つ並んで「どちらを押せばいいのか」になっていた。
+      var _sessUrl = (D.next && D.next.zoom) ? String(D.next.zoom).trim() : '';
+    ?>
+    <? for (var pi = 0; pi < D.links.length; pi++) { if (!D.links[pi].primary) continue;
+         if (_sessUrl && String(D.links[pi].url || '').trim() === _sessUrl) continue; ?>
+      <? if (canSee(D.links[pi])) { ?>
+        <div class="card">
+          <a class="btn o" href="<?= linkUrl(D.links[pi]) ?>" target="_blank"><?= D.links[pi].icon ?> <?= D.links[pi].label ?></a>
+          <? if (D.links[pi].note) { ?><small><?= D.links[pi].note ?></small><? } ?>
+        </div>
+      <? } else { ?>
+        <div class="card locked">
+          <div class="btn lock">🔒 <?= D.links[pi].label ?></div>
+          <small><?= lockMsg(D.links[pi]) ?></small>
+        </div>
+      <? } ?>
+    <? } ?>
+    <? if (D.actUrl) { ?>
+      <div class="card">
+        <a class="btn g" href="<?= D.actUrl ?>" target="_blank">📝 活動を記録する</a>
+        <small>今日の実践をフォームで報告 → Chatに自動投稿</small>
+      </div>
+    <? } ?>
+    <? if (D.chatUrl) { ?>
+      <div class="card">
+        <a class="btn" href="<?= D.chatUrl ?>" target="_blank">💬 みんなの活動を見る</a>
+        <small>Google Chat でコメントし合おう</small>
+      </div>
+    <? } ?>
+  </div>
+
+  <!-- オススメリンク -->
+  <? var norm = []; for (var ni = 0; ni < D.links.length; ni++) { if (!D.links[ni].primary) norm.push(D.links[ni]); } ?>
+  <? if (norm.length) { ?>
+    <h3 class="sec">🔖 オススメリンク</h3>
+    <div class="links">
+      <? for (var li = 0; li < norm.length; li++) { ?>
+        <? if (canSee(norm[li])) { ?>
+          <a class="lk" href="<?= linkUrl(norm[li]) ?>" target="_blank">
+            <span class="ic"><?= norm[li].icon ?></span>
+            <span><b><?= norm[li].label ?></b><? if (norm[li].note) { ?><small><?= norm[li].note ?></small><? } ?></span>
+          </a>
+        <? } else { ?>
+          <div class="lk locked">
+            <span class="ic">🔒</span>
+            <span><b><?= norm[li].label ?></b><small><?= lockMsg(norm[li]) ?></small></span>
+          </div>
+        <? } ?>
+      <? } ?>
+    </div>
+  <? } ?>
+
+  <!-- 新規入会者 -->
+  <? if (D.newcomers.length) { ?>
+    <h3 class="sec">🎉 新しい仲間（直近30日）</h3>
+    <div class="chips">
+      <? for (var ci = 0; ci < D.newcomers.length; ci++) { ?>
+        <span class="chip"><?= D.newcomers[ci].nick ?> さん<i><?= D.newcomers[ci].when ?></i></span>
+      <? } ?>
+    </div>
+  <? } ?>
+
+  <!-- 今後の予定（ロードマップ表示） -->
+  <? if (D.upcoming.length) { ?>
+    <h3 class="sec">🗓 これからの道のり<span style="font-weight:400;color:var(--sub);font-size:12px;margin-left:8px">毎週つづきます</span></h3>
+    <ol class="road">
+      <? for (var ui = 0; ui < D.upcoming.length; ui++) { ?>
+        <li>
+          <div class="rd"><?= D.upcoming[ui].label ?></div>
+          <div class="rt"><?= D.upcoming[ui].theme ?></div>
+          <? if (D.upcoming[ui].goal) { ?><div class="rg"><?= D.upcoming[ui].goal ?></div><? } ?>
+        </li>
+      <? } ?>
+    </ol>
+  <? } ?>
+
+  <? if (!D.next && !D.links.length) { ?>
+    <p class="empty">まだ予定・リンクが登録されていません。管理SSの「コホート研修スケジュール」「コホートリンク」に行を足すと、ここに表示されます。</p>
+  <? } ?>
+
+  <div class="foot">
+    ✦ マンダラチャート®クエスト MCQ110 ／ みんなのAI実践塾<br>
+    最終更新 <?= D.updated ?>（内容は5分ごとに更新されます）
+  </div>
+</div>
