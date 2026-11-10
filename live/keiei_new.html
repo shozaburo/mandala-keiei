@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="マンダラ経営実践塾。経営計画を9マスで描き、AIで毎月まわす。実務アプリ・ひな形・経営分析17ツールが使い放題。毎週火曜12:30〜13:50・月額19,800円（1社3名まで）・初期費用なし。まずは7日間の無料体験から。">
+<meta name="description" content="マンダラ経営実践塾。経営計画を9マスで描き、AIで毎月まわす。実務アプリ・ひな形・経営分析17ツールが使い放題。毎週火曜12:00〜14:00・月額19,800円（1社3名まで）・初期費用なし。まずは7日間の無料体験から。">
 <title>マンダラ経営実践塾｜株式会社クローバ経営研究所</title>
 <link rel="canonical" href="https://myhou.co.jp/keiei/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="株式会社クローバ経営研究所">
 <meta property="og:title" content="マンダラ経営実践塾｜株式会社クローバ経営研究所">
-<meta property="og:description" content="計画を9マスで描き、AIで毎月まわす。毎週火曜12:30〜13:50・月額19,800円（1社3名まで）。まずは7日間の無料体験から。">
+<meta property="og:description" content="計画を9マスで描き、AIで毎月まわす。毎週火曜12:00〜14:00・月額19,800円（1社3名まで）。まずは7日間の無料体験から。">
 <meta property="og:url" content="https://myhou.co.jp/keiei/">
 <meta property="og:image" content="https://myhou.co.jp/keiei/img/after.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -202,6 +202,11 @@
   .fig{margin:26px auto 0;max-width:720px;border:1px solid var(--rule);background:var(--surface)}
   .fig.wide{max-width:100%}
   .fig img{width:100%;display:block}
+  .fig a.zoom{display:block;position:relative}
+  .fig a.zoom::after{content:'⤢ 拡大';position:absolute;right:10px;bottom:10px;
+    font-family:var(--mono);font-size:.68rem;font-weight:700;letter-spacing:.08em;
+    color:#fff;background:rgba(11,24,41,.72);padding:5px 10px;pointer-events:none}
+  .fig a.zoom:hover::after,.fig a.zoom:focus-visible::after{background:var(--gold-dark)}
   .fig figcaption{padding:12px 18px;font-size:.82rem;color:var(--ink3);
                   border-top:1px solid var(--rule);line-height:1.7}
   .m-caption{text-align:center;font-size:.84rem;color:var(--ink3);margin-top:16px}
@@ -303,7 +308,23 @@
         font-size:.8rem;color:var(--ink3);line-height:1.9}
   .foot a{color:var(--gold-dark);text-decoration:none;border-bottom:1px solid currentColor}
   @media (prefers-reduced-motion:reduce){ *{transition:none!important;scroll-behavior:auto!important} }
+  /* 火曜2部制：時間帯と事前準備をまとめて表示 */
+  #weekly{scroll-margin-top:24px}
+  .weekly-program .tt-row{grid-template-columns:150px minmax(0,1fr)}
+  .weekly-program .tt-time{white-space:nowrap}
+  .weekly-program .cta-sub{display:inline-flex;margin-top:14px}
+  .weekly-action{margin-top:14px;font-size:.9rem}
+  .weekly-prep{margin-top:28px;padding:26px;background:var(--surface);border:1px solid var(--rule)}
+  .weekly-prep ol{margin:18px 0 0;padding-left:1.5em;list-style:decimal}
+  .weekly-prep li{margin-top:14px;line-height:1.9}
+  @media(max-width:600px){.weekly-program .tt-row{grid-template-columns:1fr}.weekly-prep{padding:20px}}
 </style>
+
+<!-- 2026-09-13 追記：不足していた canonical / OGP / favicon -->
+<meta property="og:locale" content="ja_JP">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
 <body>
 
@@ -317,16 +338,17 @@
     <div class="tag">計画を9マスで描き、AIで毎月まわす。</div>
     <p class="lede">
       1979年に生まれたマンダラチャートで経営の型を整え、AIで実務を動かします。
-      計画を立てて終わり、にはしません。
+      火曜は、前半に仲間のAI実践を知り、後半に自社の経営課題を手を動かして進めます。
     </p>
     <div class="facts">
       <div class="fact"><b>19,800円</b>／月（税込）</div>
-      <div class="fact"><b>毎週火曜</b>12:30〜13:50</div>
+      <div class="fact"><b>毎週火曜</b>12:00〜14:00</div>
       <div class="fact"><b>1社3名</b>まで参加OK</div>
       <div class="fact"><b>7日間</b>無料で体験できます</div>
     </div>
     <div class="btns">
       <a class="cta-main" href="https://docs.google.com/forms/d/e/1FAIpQLSdc4Y5BcL867eMr5dVbvW2DgFE5mCwq2ciQABV7LInDVGhZdQ/viewform" target="_blank" rel="noopener">7日間の無料体験に申し込む</a>
+      <a class="cta-sub" href="#weekly">火曜の流れと参加準備を見る</a>
       <a class="cta-sub" href="#price">料金と中身を見る</a>
     </div>
   </div>
@@ -407,8 +429,8 @@
     <div class="steps">
       <div class="step">
         <div class="lbl">STEP 1 ／ 見る</div>
-        <div class="when">火曜 12:30〜13:50</div>
-        <p>昼活（経営者・AI学習者の交流会）を見学。お申込みいただいた方に、参加用のURLをメールでお送りします。</p>
+        <div class="when">火曜 12:00〜14:00</div>
+        <p>12時からの自己紹介・AI実践事例共有と、13時からの経営AIスキル実習を見学。お申込みいただいた方に、参加用のURLをメールでお送りします。</p>
         <div class="fee">無料（お申込みが必要です）</div>
         <a class="go" href="https://docs.google.com/forms/d/e/1FAIpQLSdc4Y5BcL867eMr5dVbvW2DgFE5mCwq2ciQABV7LInDVGhZdQ/viewform" target="_blank" rel="noopener">見学を申し込む →</a>
       </div>
@@ -424,46 +446,93 @@
         <div class="when">本会員</div>
         <p>64クエストすべてと経営ツールがひらきます。月次のOKRチェックで、計画が引き出しに戻らないようにします。</p>
         <div class="fee">月額 19,800円（1社3名まで）</div>
-        <a class="go" href="#price">料金を見る →</a>
+        <a class="go" href="#join">入会の手続きへ →</a>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ═══ 毎週やること ═══ -->
-<section class="sec alt">
+<section class="sec alt" id="weekly">
   <div class="wrap">
     <div class="eyebrow">毎週やること</div>
-    <h2>火曜のお昼、80分</h2>
-    <p class="lede">毎週この2本立てです。出られない週はアーカイブで追いつけます。</p>
+    <h2>火曜は「共有する1時間」と「実践する1時間」</h2>
+    <p class="lede">毎週火曜 12:00〜14:00（日本時間）、Google Meetで開催します。前半は仲間から学び、後半は自分の会社に使える形にする2部制です。出られない週はアーカイブで追いつけます。</p>
     <figure class="fig wide">
       <img src="img/hirukatsu.jpg" alt="オンラインで参加する経営者のみなさん" loading="lazy">
       <figcaption>参加者は40代〜60代が中心。カメラオフでのご参加も歓迎です。</figcaption>
     </figure>
-    <div class="tt">
+    <div class="tt weekly-program">
       <div class="tt-row">
-        <div class="tt-time">12:30</div>
+        <div class="tt-time">12:00〜13:00</div>
         <div class="tt-body">
-          <b>最新AI情報と、新しいアプリの紹介</b>
-          <span>
-            この1週間で何が変わったのか。経営者が知っておくべき新機能だけを絞ってお伝えします。
-            その週に追加されたアプリ・ひな形もここで配ります。
-            「結局どのAIを使えばいいのか」がその場で片づきます。
-          </span>
+          <b>第1部｜自己紹介と、仲間のAI実践事例を共有</b>
+          <span>「みんなのボード」を見ながら自己紹介し、最近試したAIの使い方や、作ったアプリを紹介します。うまくいったことも、困ったことも持ち寄り、自分の仕事で試すヒントを見つけます。</span>
+          <p class="weekly-action">参加前に：最近試したこと、または作ったアプリを1件、ボードに投稿してください。</p>
+          <a class="cta-sub" href="https://myhou.co.jp/keiei/today/" target="_blank" rel="noopener">みんなのボードを開く →</a>
         </div>
       </div>
       <div class="tt-row">
-        <div class="tt-time">13:00</div>
+        <div class="tt-time">13:00〜14:00</div>
         <div class="tt-body">
-          <b>ケーススタディ、または経営計画ツールの実習</b>
-          <span>
-            回によってどちらかを行います。ケーススタディでは、実際にAIを入れた会社の
-            うまくいったこと・詰まったことを共有し、出た相談をその場で解きます。
-            実習では、マンダラOKRやSWOTなどを参加者みんなで動かします。
-          </span>
+          <b>第2部｜64の経営者のAIスキルを実践</b>
+          <span>「経営塾の道場」を開き、その日のテーマに沿って手を動かします。AIに相談しながら、自社の課題を整理し、経営に使える計画や成果物にまとめます。</span>
+          <p class="weekly-action">参加前に：道場へログインできることを確かめてください。下の手順で準備できます。</p>
+          <a class="cta-sub" href="https://ca.mandalachart.jp/dojo" target="_blank" rel="noopener">経営塾の道場を開く →</a>
         </div>
       </div>
     </div>
+
+    <div class="weekly-prep">
+      <h3>参加前に、この3つを準備</h3>
+      <ol>
+        <li><strong>ボードに1件投稿。</strong>最近試したAIの使い方や作ったアプリを、みんなのボードに載せます。</li>
+        <li><strong>道場のログインを確認。</strong>申込時と同じメールアドレスのGoogleアカウントでログインします。本人確認が必要な場合は「メールの本人リンクで確認する」を選び、届いたメールのリンクで確認した後、もう一度「経営塾の道場」を開いてください。</li>
+        <li><strong>参加案内メールを確認。</strong>当日はメールで届いたGoogle Meetの参加URLから入室します。参加URLはお申込みいただいた方にメールでお送りします。</li>
+      </ol>
+    </div>
+
+    <h3 style="margin-top:40px">実習テーマと日程（2026年）</h3>
+    <p>13:00〜14:00の実習では、64の経営者のAIスキルのうち、8部門の4マス目をA→Hの順に進めます。</p>
+    <div class="tt">
+      <div class="tt-row">
+        <div class="tt-time">10/6</div>
+        <div class="tt-body"><b>A4｜NotebookLMで自社理念ノートを構築</b><span>経営理念</span></div>
+      </div>
+      <div class="tt-row">
+        <div class="tt-time">10/13</div>
+        <div class="tt-body"><b>B4｜社長専用Projectsの構築</b><span>社長方針</span></div>
+      </div>
+      <div class="tt-row">
+        <div class="tt-time">10/20</div>
+        <div class="tt-body"><b>C4｜月次財務ダッシュボード自動化</b><span>財務計画</span></div>
+      </div>
+      <div class="tt-row">
+        <div class="tt-time">10/27</div>
+        <div class="tt-body"><b>D4｜ペルソナをAIで深掘り</b><span>商品顧客開発</span></div>
+      </div>
+      <div class="tt-row">
+        <div class="tt-time">11/3</div>
+        <div class="tt-body"><b>文化の日のため休講です</b></div>
+      </div>
+      <div class="tt-row">
+        <div class="tt-time">11/10</div>
+        <div class="tt-body"><b>E4｜階層別アクションプランの作成（火の用心モデル）</b><span>組織計画。会社の方針を、部門・チーム・一人ひとりの行動へ具体化する実習です。</span></div>
+      </div>
+      <div class="tt-row">
+        <div class="tt-time">11/17</div>
+        <div class="tt-body"><b>F4｜新人オンボーディング設計</b><span>人財育成</span></div>
+      </div>
+      <div class="tt-row">
+        <div class="tt-time">11/24</div>
+        <div class="tt-body"><b>G4｜OKR週次サイクル＋音声日報＋CFR</b><span>予実管理</span></div>
+      </div>
+      <div class="tt-row">
+        <div class="tt-time">12/1</div>
+        <div class="tt-body"><b>H4｜社員からの改善提案を3つのイノベーション軸でAI分類</b><span>改善改革</span></div>
+      </div>
+    </div>
+    <p class="note">12/8からは5マス目（A5〜）に進みます。日程は変わることがあります。</p>
     <p class="note">
       扱う道具は Gemini・NotebookLM・スプレッドシートが中心です。特定のAIに縛りません。
       ChatGPT・Gemini・Claude の中から、その業務にいちばん効くものを選べるようになります。
@@ -482,8 +551,10 @@
       社長がいつでも「今の数字」を見られる状態になります。
     </p>
     <figure class="fig wide" style="margin-top:26px">
-      <img src="img/dashboard.jpg" alt="経理ダッシュボードの画面。未回収総額2,588,000円・今期請求累計4,505,200円・要送信2件・入金消込7/16件と、月次予実管理のグラフと表" loading="lazy">
-      <figcaption>実際に動くデモです（架空のサンプルデータ）。未回収・請求・入金・月次予実が1画面に集まっています。</figcaption>
+      <a class="zoom" href="img/dashboard.jpg" target="_blank" rel="noopener" aria-label="経理ダッシュボードの画像を拡大して見る">
+        <img src="img/dashboard.jpg" alt="経理ダッシュボードの画面。未回収総額2,588,000円・今期請求累計4,505,200円・要送信2件・入金消込7/16件と、月次予実管理のグラフと表" loading="lazy">
+      </a>
+      <figcaption>実際に動くデモです（架空のサンプルデータ）。未回収・請求・入金・月次予実が1画面に集まっています。画像はタップで拡大できます。</figcaption>
     </figure>
     <ul class="feat-list">
       <li>未回収の総額・件数をその場で表示</li>
@@ -492,6 +563,25 @@
       <li>月次の売上・経費・営業利益の予実管理</li>
       <li>入金進捗率と延滞リストの自動更新</li>
     </ul>
+
+    <h3 style="margin-top:44px">数字を見るだけで、終わらせない</h3>
+    <p class="lede">
+      同じダッシュボードの中に「経営マンダラ（9マス）」があります。
+      まん中に<strong>「来月の打ち手を、数字で決める」</strong>を置き、
+      まわりの8マスに着地見込み・前年同月比・資金繰り・未回収・粗利・固定費・請求もれ・来月の予算。
+      各マスの「質問」をコピーしてAIに貼るだけで、その場で最新の数字が返ってきます。
+    </p>
+    <p class="lede">
+      数字を眺めて終わるのではなく、<strong>9マスが社長に問いを投げてくる</strong>。
+      これがマンダラチャート®を経営に持ち込む、いちばん実務的なかたちです。毎月20日・30分で回ります。
+    </p>
+    <figure class="fig wide" style="margin-top:26px">
+      <a class="zoom" href="img/keiei-mandala9.jpg" target="_blank" rel="noopener" aria-label="経営マンダラ（9マス）の画像を拡大して見る">
+        <img src="img/keiei-mandala9.jpg" alt="経営マンダラ（9マス）の画面。中央に「来月の打ち手を、数字で決める」、周囲8マスに着地見込み・前年同月比・資金繰り予測・未回収の回収・粗利改善・固定費の点検・請求もれ点検・来月の予算が並び、各マスに「質問をコピー」ボタンがある" loading="lazy">
+      </a>
+      <figcaption>数字は架空のサンプル（デモ）です。本番は会計データがそのまま入ります。画像はタップで拡大できます。</figcaption>
+    </figure>
+
     <div class="btns">
       <a class="cta-sub" href="https://myhou.co.jp/keiri/demo/" target="_blank" rel="noopener">経理ダッシュボードのデモを触ってみる</a>
     </div>
@@ -577,17 +667,12 @@
       8 × 8 ＝ 64のクエスト。1マスずつ実践して報告すると、進んだところが染まっていきます。
       部門を制覇すると称号がつきます。
     </p>
-    <div class="grid64" role="img" aria-label="8×8の64マス。進んだマスが金色に染まっていく様子">
-      <div class="g-cell on"></div><div class="g-cell on"></div><div class="g-cell on"></div><div class="g-cell on"></div><div class="g-cell on"></div><div class="g-cell on"></div><div class="g-cell on"></div><div class="g-cell on"></div>
-      <div class="g-cell on"></div><div class="g-cell on"></div><div class="g-cell on"></div><div class="g-cell on"></div><div class="g-cell on"></div><div class="g-cell half"></div><div class="g-cell"></div><div class="g-cell"></div>
-      <div class="g-cell on"></div><div class="g-cell on"></div><div class="g-cell on"></div><div class="g-cell half"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div>
-      <div class="g-cell on"></div><div class="g-cell on"></div><div class="g-cell half"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div>
-      <div class="g-cell on"></div><div class="g-cell half"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div>
-      <div class="g-cell half"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div>
-      <div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div>
-      <div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div><div class="g-cell"></div>
-    </div>
-    <p class="m-caption">金色が進んだマス。全部で64。</p>
+    <figure class="fig wide">
+      <a class="zoom" href="img/mandala-okr81.jpg" target="_blank" rel="noopener" aria-label="法人のマンダラOKRの画像を拡大して見る">
+        <img src="img/mandala-okr81.jpg" alt="9×9・81マスの法人マンダラOKR。中央に法人の願い、周りにA〜Hの8つの目標、さらにその外側に各目標を支える8つの行動。各マスに担当者と達成度のバーが付いている" loading="lazy">
+      </a>
+      <figcaption>マンダラOKRの例（架空の介護法人）。各マスに担当者と進み具合が付きます。画像はタップで拡大できます。</figcaption>
+    </figure>
     <div class="tcols" style="margin-top:34px">
       <div class="tcol"><h4>理念・リーダーシップ</h4><ul><li>敬天愛人</li><li>世界一の覚悟</li></ul></div>
       <div class="tcol"><h4>財務・成長</h4><ul><li>論語と算盤</li><li>レールを敷く者</li></ul></div>
@@ -667,8 +752,8 @@
           <li>月払いの内容はすべて含みます</li>
           <li>経営計画は1年単位で回すもの。年払いのほうが計画と歩調が合います</li>
         </ul>
-        <a class="cta-sub" style="margin-top:auto;text-align:center" href="mailto:info@mandalachart.jp?subject=%E3%83%9E%E3%83%B3%E3%83%80%E3%83%A9%E7%B5%8C%E5%96%B6%E5%AE%9F%E8%B7%B5%E5%A1%BE%20%E5%B9%B4%E6%89%95%E3%81%84%EF%BC%88198%2C000%E5%86%86%EF%BC%89%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6&body=%E3%83%9E%E3%83%B3%E3%83%80%E3%83%A9%E7%B5%8C%E5%96%B6%E5%AE%9F%E8%B7%B5%E5%A1%BE%E3%81%AE%E5%B9%B4%E6%89%95%E3%81%84%EF%BC%88198%2C000%E5%86%86%E3%83%BB%E7%A8%8E%E8%BE%BC%EF%BC%89%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E7%9B%B8%E8%AB%87%E3%81%97%E3%81%9F%E3%81%84%E3%81%A7%E3%81%99%E3%80%82%0A%0A%E4%BC%9A%E7%A4%BE%E5%90%8D%EF%BC%9A%0A%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0A%E3%81%94%E9%80%A3%E7%B5%A1%E5%85%88%EF%BC%88%E9%9B%BB%E8%A9%B1%EF%BC%89%EF%BC%9A%0A%E3%81%94%E5%B8%8C%E6%9C%9B%E3%81%AE%E9%96%8B%E5%A7%8B%E6%99%82%E6%9C%9F%EF%BC%9A%0A">年払いを相談する（メール）</a>
-        <p class="note" style="margin-top:6px">年払いは個別にご案内しています。フォームではなくメールでご相談ください。</p>
+        <a class="cta-sub" style="margin-top:auto;text-align:center" href="https://buy.stripe.com/7sYdR94Jm92F4YO1Tf5os0i" target="_blank" rel="noopener">年払いを申し込む</a>
+        <p class="note" style="margin-top:6px">お申込みにはメンバーIDが必要です。お持ちでない方は、先に7日間の無料体験へ。請求書でのお支払いをご希望の方は <a href="mailto:info@mandalachart.jp" style="color:var(--gold-dark)">info@mandalachart.jp</a> までご相談ください。</p>
       </div>
     </div>
 
@@ -691,8 +776,9 @@
 
     <!-- ─── 体験のあとの入会導線（2026-08-09 追加） ───
          体験が終わった方に「次に何をすればいいか」が無かったため追加。
-         ★Squareの支払いリンクが決まったら、STEP 3 のボタンをそこへ差し替える。
-           GAS側の同じリンクは 管理SS メニュー「ETA-T9 η 決済リンク設定」で設定する。
+         ★決済は Stripe の支払いリンク（2026-08-24 に Square から変更）。STEP 3 のボタンがそれ。
+           GAS側の同じリンクも 管理SS メニュー「ETA-T9 η 決済リンク設定」で
+           同じ Stripe のURLに揃えること（片方だけ直すとズレる）。
            金額を変えるときは、この節・上の料金表・GASの ETA_PRICE_MONTHLY /
            ETA_PRICE_YEARLY（MCQ110_eta_setup.gs）の3か所を必ず揃えること。 -->
     <h3 id="join" style="margin-top:56px">体験のあと、入会するには</h3>
@@ -720,13 +806,13 @@
         <div class="when">クレジットカード</div>
         <p>お支払いが確認できしだい、残り7部門・全64クエストと経営ツールがひらきます。体験中の進捗はそのまま残ります。翌週の火曜から、本会員として合流してください。</p>
         <div class="fee">月額 19,800円・毎月自動更新</div>
-        <a class="go" href="https://square.link/u/QAihDdJ4" target="_blank" rel="noopener">お支払いに進む →</a>
+        <a class="go" href="https://buy.stripe.com/28EeVdejW3Il9f4cxT5os05" target="_blank" rel="noopener">お支払いに進む →</a>
       </div>
     </div>
     <p class="note" style="margin-top:18px">
-      体験期間が終わっても、昼活（毎週火曜 12:30〜13:50）とお便りは引き続きご参加いただけます。
-      年払い（198,000円）をご希望の方、ご不明な点のある方は、フォームではなく
-      <a href="mailto:info@mandalachart.jp" style="color:var(--gold-dark)">info@mandalachart.jp</a> までご相談ください。
+      体験期間が終わっても、昼活（毎週火曜 12:00〜14:00）とお便りは引き続きご参加いただけます。
+      年払い（198,000円・年1回の自動更新）をご希望の方は、料金のご案内から直接お申込みいただけます。
+      ご不明な点は <a href="mailto:info@mandalachart.jp" style="color:var(--gold-dark)">info@mandalachart.jp</a> までご相談ください。
     </p>
   </div>
 </section>
@@ -739,7 +825,7 @@
     <div class="faq">
       <details>
         <summary>途中で解約できますか？</summary>
-        <div class="a">月払いはいつでも解約できます。違約金や最低利用期間はありません。年払いは個別のご相談としてお受けしています。</div>
+        <div class="a">月払いはいつでも解約できます。違約金や最低利用期間はありません。年払いは1年ごとの自動更新です。次の更新日より前にお申し出いただければ、更新は止まります。</div>
       </details>
       <details>
         <summary>3名は誰でもいいのですか？</summary>
@@ -795,8 +881,10 @@
         <img class="avatar" src="img/instructor_koto.jpg" alt="コトウ ユウキ 氏" loading="lazy" width="106" height="106">
         <div class="role">CERTIFIED TRAINER</div><b>コトウ ユウキ 氏</b>
         <ul>
+          <li>株式会社cozcic 代表取締役／株式会社Rodisana 取締役COO</li>
           <li>一般社団法人マンダラチャート協会 認定トレーナー</li>
-          <li>マンダラチャートを使った実践指導を担当</li>
+          <li>一般社団法人日本中小企業経営者支援協会 副代表理事</li>
+          <li>東京中小企業家同友会 渋谷支部長。3社の経営に携わりながら実践指導を担当</li>
         </ul>
       </div>
       <div class="person">
@@ -910,7 +998,7 @@
   <div class="wrap final">
     <h2>まずは7日間、中を見てから決めてください</h2>
     <p>
-      パンフレットを読むより、実際の80分をご覧いただくのが早いと思います。
+      パンフレットを読むより、実際の120分をご覧いただくのが早いと思います。
       お申込みいただくと、昼活の参加URLと、経営理念（エリアA）の2マスをお送りします。
       2名までご一緒にどうぞ。
     </p>
@@ -918,7 +1006,7 @@
       <a class="cta-main" href="https://docs.google.com/forms/d/e/1FAIpQLSdc4Y5BcL867eMr5dVbvW2DgFE5mCwq2ciQABV7LInDVGhZdQ/viewform" target="_blank" rel="noopener">7日間の無料体験に申し込む</a>
     </div>
     <p style="font-size:.84rem;color:rgba(255,255,255,.68);margin-top:22px">
-      毎週火曜 12:30〜13:50 ／ オンライン（Google Meet）／ 費用は一切かかりません。<br>
+      毎週火曜 12:00〜14:00 ／ オンライン（Google Meet）／ 費用は一切かかりません。<br>
       参加用のURLは、お申込みいただいた方にメールでお送りします。
       体験だけで終わっても構いません。カメラオフでのご参加も歓迎です。
     </p>

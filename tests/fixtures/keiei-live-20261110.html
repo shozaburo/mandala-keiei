@@ -1,0 +1,1020 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="マンダラ経営実践塾。経営計画を9マスで描き、AIで毎月まわす。実務アプリ・ひな形・経営分析17ツールが使い放題。毎週火曜12:30〜13:50・月額19,800円（1社3名まで）・初期費用なし。まずは7日間の無料体験から。">
+<title>マンダラ経営実践塾｜株式会社クローバ経営研究所</title>
+<link rel="canonical" href="https://myhou.co.jp/keiei/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="株式会社クローバ経営研究所">
+<meta property="og:title" content="マンダラ経営実践塾｜株式会社クローバ経営研究所">
+<meta property="og:description" content="計画を9マスで描き、AIで毎月まわす。毎週火曜12:30〜13:50・月額19,800円（1社3名まで）。まずは7日間の無料体験から。">
+<meta property="og:url" content="https://myhou.co.jp/keiei/">
+<meta property="og:image" content="https://myhou.co.jp/keiei/img/after.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  /* ── reset ── */
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+  body,h1,h2,h3,h4,p,dl,dd,ul,ol,figure,figcaption{margin:0}
+  ul,ol{padding:0;list-style:none}
+  img{max-width:100%;height:auto;display:block}
+  a{color:inherit}
+  table{border-collapse:collapse}
+
+  :root{
+    --navy:#0b1829; --navy-mid:#152540; --navy-lt:#1e3560;
+    --gold:#c9a84c; --gold-dark:#9a7530; --gold-light:#e8cc7a; --gold-pale:#f5e9c0;
+    --cream:#faf6ee; --cream-dk:#f0e9d8;
+    --ground:#faf6ee; --surface:#fff;
+    --ink:#2a2a2a; --ink2:#5b5b5b; --ink3:#8a8a8a;
+    --rule:#e3dbc8; --rule2:#cdc2a8;
+    --kin-wash:rgba(201,168,76,.16);
+    --display:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;
+    --body:"Noto Sans JP","Hiragino Sans","Yu Gothic",sans-serif;
+    --mono:ui-monospace,SFMono-Regular,Consolas,monospace;
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --ground:#0b1829; --surface:#152540; --cream:#0b1829; --cream-dk:#0a1524;
+      --ink:#f0e9d8; --ink2:#b9b0a0; --ink3:#8d8578;
+      --rule:#23344f; --rule2:#35496a; --gold-dark:#e8cc7a;
+      --kin-wash:rgba(201,168,76,.18);
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#0b1829; --surface:#152540; --cream:#0b1829; --cream-dk:#0a1524;
+    --ink:#f0e9d8; --ink2:#b9b0a0; --ink3:#8d8578;
+    --rule:#23344f; --rule2:#35496a; --gold-dark:#e8cc7a;
+    --kin-wash:rgba(201,168,76,.18);
+  }
+  :root[data-theme="light"]{
+    --ground:#faf6ee; --surface:#fff; --cream:#faf6ee; --cream-dk:#f0e9d8;
+    --ink:#2a2a2a; --ink2:#5b5b5b; --ink3:#8a8a8a;
+    --rule:#e3dbc8; --rule2:#cdc2a8; --gold-dark:#9a7530;
+    --kin-wash:rgba(201,168,76,.16);
+  }
+
+  body{background:var(--ground);color:var(--ink);font-family:var(--body);
+       font-size:16px;line-height:1.9;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 22px}
+  .sec{padding:72px 0;border-top:1px solid var(--rule)}
+  .sec.alt{background:var(--cream-dk)}
+  .sec.dark{background:var(--navy);color:#fff;border-top:0}
+  @media (max-width:640px){ .sec{padding:52px 0} }
+
+  h1{font-family:var(--display);font-weight:700;line-height:1.34;letter-spacing:.01em;
+     font-size:clamp(1.9rem,5.4vw,3.1rem);text-wrap:balance}
+  h2{font-family:var(--display);font-weight:600;line-height:1.48;text-wrap:balance;
+     font-size:clamp(1.32rem,3.2vw,1.78rem);margin-bottom:10px}
+  h3{font-family:var(--display);font-weight:600;font-size:1.06rem;line-height:1.55}
+  h4{font-family:var(--display);font-weight:600;font-size:.98rem}
+  p{max-width:66ch}
+  .eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.2em;color:var(--gold-dark);
+           font-weight:700;margin-bottom:12px}
+  .lede{color:var(--ink2);font-size:1.03rem;max-width:62ch;margin-top:8px}
+  .note{font-size:.82rem;color:var(--ink3);line-height:1.75;margin-top:14px}
+  strong{font-weight:700}
+
+  /* ── ボタン ── */
+  .cta-main,.cta-sub{display:inline-block;text-decoration:none;font-weight:700;
+    padding:15px 30px;font-size:1rem;letter-spacing:.02em;border:1px solid transparent;
+    transition:transform .12s,opacity .12s}
+  .cta-main{background:var(--gold);color:var(--navy);border-color:var(--gold)}
+  .cta-main:hover,.cta-main:focus-visible{transform:translateY(-1px);opacity:.92}
+  .cta-sub{background:transparent;color:var(--gold-dark);border-color:var(--rule2)}
+  .cta-sub:hover,.cta-sub:focus-visible{border-color:var(--gold);color:var(--gold-dark)}
+  .sec.dark .cta-sub{color:var(--gold-light);border-color:rgba(201,168,76,.5)}
+  .btns{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:26px}
+  a:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+  /* ── ヒーロー ── */
+  .hero{position:relative;overflow:hidden;background:linear-gradient(120deg,var(--navy),var(--navy-mid));
+        color:#fff;min-height:620px;display:flex;align-items:center}
+  .hero__bg{position:absolute;inset:0;background:url('img/founder-closeup.jpg') right center/cover;
+            opacity:.9;filter:grayscale(26%) brightness(1.26) contrast(.96)}
+  .hero__ov{position:absolute;inset:0;background:linear-gradient(to right,
+            rgba(11,24,41,.93) 0%,rgba(11,24,41,.85) 40%,rgba(11,24,41,.5) 58%,
+            rgba(11,24,41,.12) 80%,rgba(11,24,41,0) 100%)}
+  .hero__in{position:relative;z-index:2;width:100%;max-width:1060px;margin:0 auto;
+            padding:80px 22px 72px}
+  .hero__in>*{text-shadow:0 1px 14px rgba(11,24,41,.6)}
+  .hero .kicker{display:inline-block;background:rgba(201,168,76,.14);
+    border:1px solid rgba(201,168,76,.44);color:var(--gold-light);
+    padding:6px 20px;border-radius:30px;font-size:.84rem;text-shadow:none}
+  .hero h1{color:#fff;margin:22px 0 6px}
+  .hero .tag{font-family:var(--display);font-size:clamp(1.05rem,2.4vw,1.4rem);
+             color:var(--gold-light);font-weight:600}
+  .hero .lede{color:rgba(255,255,255,.9);max-width:44ch;margin-top:20px}
+
+  .facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+  .fact{background:rgba(255,255,255,.07);border:1px solid rgba(201,168,76,.34);
+        padding:10px 16px;font-size:.86rem;text-shadow:none}
+  .fact b{font-family:var(--display);color:var(--gold-light);font-size:1rem;margin-right:6px}
+  @media (max-width:820px){
+    .hero__bg{background-position:70% center;opacity:.55}
+    .hero__ov{background:linear-gradient(to bottom,rgba(11,24,41,.9),rgba(11,24,41,.72))}
+  }
+  @media (max-width:640px){ .hero{min-height:auto} .hero__in{padding:56px 20px 52px} }
+
+  /* ── 写真つきカード（お悩み） ── */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(224px,1fr));
+         gap:18px;margin-top:26px}
+  .card{background:var(--surface);border:1px solid var(--rule);overflow:hidden;
+        display:flex;flex-direction:column}
+  .card img{aspect-ratio:4/3;object-fit:cover;filter:grayscale(14%)}
+  .card .body{padding:16px 18px 20px}
+  .card b{display:block;font-family:var(--display);font-size:1.02rem;margin-bottom:5px}
+  .card span{font-size:.85rem;color:var(--ink2);line-height:1.8}
+
+  /* ── Before / After ── */
+  .ba{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:26px}
+  .ba figure{background:var(--surface);border:1px solid var(--rule);overflow:hidden}
+  .ba.after figure{border-color:var(--gold)}
+  .ba img{aspect-ratio:16/11;object-fit:cover}
+  .ba .cap{padding:18px 20px 22px}
+  .ba .lbl{font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;color:var(--ink3);font-weight:700}
+  .ba figure.hi .lbl{color:var(--gold-dark)}
+  .ba h3{margin:6px 0 10px}
+  .ba ul{display:flex;flex-direction:column;gap:7px}
+  .ba li{font-size:.88rem;line-height:1.75;padding-left:1em;position:relative;color:var(--ink2)}
+  .ba li::before{content:'—';position:absolute;left:0;color:var(--rule2)}
+  .ba figure.hi li::before{content:'✓';color:var(--gold-dark)}
+  @media (max-width:760px){ .ba{grid-template-columns:1fr} }
+
+  /* ── 3ステップ ── */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);
+         border:1px solid var(--rule);margin-top:26px}
+  .step{background:var(--surface);padding:24px 20px;display:flex;flex-direction:column;gap:9px}
+  .step .lbl{font-family:var(--mono);font-size:.7rem;letter-spacing:.13em;color:var(--gold-dark);font-weight:700}
+  .step .when{font-family:var(--display);font-size:1.08rem;font-weight:600}
+  .step p{font-size:.86rem;color:var(--ink2);margin:0}
+  .step .fee{font-size:.84rem;font-weight:700;margin-top:auto;padding-top:12px;color:var(--ink)}
+  .step .go{font-size:.84rem;font-weight:700;color:var(--gold-dark);text-decoration:none;
+            border-bottom:1px solid currentColor;align-self:flex-start}
+  @media (max-width:760px){ .steps{grid-template-columns:1fr} }
+
+  /* ── 時間割 ── */
+  .tt{display:flex;flex-direction:column;gap:1px;background:var(--rule);
+      border:1px solid var(--rule);margin-top:26px}
+  .tt-row{background:var(--surface);padding:24px 22px;display:grid;grid-template-columns:96px 1fr;gap:20px}
+  .tt-time{font-family:var(--mono);font-size:1.1rem;color:var(--gold-dark);font-weight:700}
+  .tt-body b{display:block;font-family:var(--display);font-size:1.05rem;margin-bottom:7px}
+  .tt-body span{font-size:.88rem;color:var(--ink2);line-height:1.85}
+  @media (max-width:600px){ .tt-row{grid-template-columns:1fr;gap:8px} }
+
+  /* ── ダッシュボード ── */
+  .feat-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(228px,1fr));
+             gap:14px;margin-top:24px}
+  .feat-list li{background:var(--surface);border:1px solid var(--rule);padding:15px 17px;
+                font-size:.87rem;line-height:1.75}
+
+  /* ── アプリ一覧 ── */
+  .apps{display:grid;grid-template-columns:repeat(auto-fill,minmax(158px,1fr));gap:1px;
+        background:var(--rule);border:1px solid var(--rule);margin-top:24px}
+  .app{background:var(--surface);padding:16px 15px}
+  .app b{display:block;font-family:var(--display);font-size:.93rem;margin-bottom:3px}
+  .app span{font-size:.77rem;color:var(--ink2);line-height:1.65}
+
+  /* ── 3ステップ（ひな形） ── */
+  .flow{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);
+        border:1px solid var(--rule);margin-top:24px}
+  .fl{background:var(--surface);padding:22px 20px}
+  .fl .no{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;color:var(--gold-dark);font-weight:700}
+  .fl b{display:block;font-family:var(--display);font-size:1.02rem;margin:7px 0}
+  .fl span{font-size:.85rem;color:var(--ink2);line-height:1.8}
+  @media (max-width:760px){ .flow{grid-template-columns:1fr} }
+
+  /* ── 17ツール ── */
+  .tcols{display:grid;grid-template-columns:repeat(auto-fit,minmax(222px,1fr));gap:1px;
+         background:var(--rule);border:1px solid var(--rule);margin-top:24px}
+  .tcol{background:var(--surface);padding:22px 20px}
+  .tcol h4{margin-bottom:11px;color:var(--gold-dark)}
+  .tcol ul{display:flex;flex-direction:column;gap:6px}
+  .tcol li{font-size:.83rem;line-height:1.7;color:var(--ink2);padding-left:.9em;position:relative}
+  .tcol li::before{content:'·';position:absolute;left:0;color:var(--gold);font-weight:700}
+
+  /* ── 図版 ── */
+  .fig{margin:26px auto 0;max-width:720px;border:1px solid var(--rule);background:var(--surface)}
+  .fig.wide{max-width:100%}
+  .fig img{width:100%;display:block}
+  .fig a.zoom{display:block;position:relative}
+  .fig a.zoom::after{content:'⤢ 拡大';position:absolute;right:10px;bottom:10px;
+    font-family:var(--mono);font-size:.68rem;font-weight:700;letter-spacing:.08em;
+    color:#fff;background:rgba(11,24,41,.72);padding:5px 10px;pointer-events:none}
+  .fig a.zoom:hover::after,.fig a.zoom:focus-visible::after{background:var(--gold-dark)}
+  .fig figcaption{padding:12px 18px;font-size:.82rem;color:var(--ink3);
+                  border-top:1px solid var(--rule);line-height:1.7}
+  .m-caption{text-align:center;font-size:.84rem;color:var(--ink3);margin-top:16px}
+
+  /* ── 64マス ── */
+  .grid64{display:grid;grid-template-columns:repeat(8,1fr);gap:3px;max-width:520px;
+          margin:22px auto 0;aspect-ratio:1/1}
+  .g-cell{background:var(--surface);border:1px solid var(--rule)}
+  .g-cell.on{background:var(--gold);border-color:var(--gold-dark)}
+  .g-cell.half{background:var(--kin-wash);border-color:var(--rule2)}
+
+  /* ── 料金 ── */
+  .plans{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
+  .plan{background:var(--surface);border:1px solid var(--rule);padding:28px;
+        display:flex;flex-direction:column;gap:13px}
+  .plan.best{border-color:var(--gold);box-shadow:inset 0 3px 0 var(--gold)}
+  .plan .badge{align-self:flex-start;font-size:.7rem;letter-spacing:.1em;font-weight:700;
+               color:var(--gold-dark);background:var(--kin-wash);padding:4px 11px}
+  .plan .amount{font-family:var(--display);font-size:2.45rem;line-height:1.15;
+                font-variant-numeric:tabular-nums}
+  .plan .per{font-family:var(--body);font-size:.9rem;color:var(--ink2)}
+  .plan .save{font-size:.86rem;color:var(--gold-dark);font-weight:700}
+  .plan ul{display:flex;flex-direction:column;gap:7px}
+  .plan li{font-size:.87rem;line-height:1.75;padding-left:1.1em;position:relative}
+  .plan li::before{content:'✓';position:absolute;left:0;color:var(--gold-dark);font-weight:700}
+  @media (max-width:760px){ .plans{grid-template-columns:1fr} }
+
+  .tbl-scroll{overflow-x:auto;margin-top:26px}
+  .cmp{width:100%;font-size:.88rem;min-width:420px}
+  .cmp th,.cmp td{border:1px solid var(--rule);padding:12px 15px;text-align:left;background:var(--surface)}
+  .cmp th{font-family:var(--display);background:var(--cream-dk)}
+  .cmp td:last-child{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .cmp tr.total td{background:var(--kin-wash);font-weight:700}
+
+  /* ── FAQ ── */
+  .faq{margin-top:26px;border:1px solid var(--rule);background:var(--surface)}
+  .faq details{border-bottom:1px solid var(--rule)}
+  .faq details:last-child{border-bottom:0}
+  .faq summary{padding:18px 22px;cursor:pointer;font-family:var(--display);
+               font-weight:600;font-size:.98rem;list-style:none;display:flex;gap:12px}
+  .faq summary::-webkit-details-marker{display:none}
+  .faq summary::before{content:'Q';font-family:var(--mono);color:var(--gold-dark);font-weight:700}
+  .faq details[open] summary{background:var(--cream-dk)}
+  .faq .a{padding:0 22px 20px 54px;font-size:.88rem;color:var(--ink2);line-height:1.85}
+
+  /* ── 講師 ── */
+  .people{display:grid;grid-template-columns:repeat(auto-fit,minmax(214px,1fr));gap:1px;
+          background:var(--rule);border:1px solid var(--rule);margin-top:26px}
+  .person{background:var(--surface);padding:28px 20px 26px;text-align:center;
+          display:flex;flex-direction:column;align-items:center}
+  .person .avatar{width:106px;height:106px;border-radius:50%;object-fit:cover;
+    object-position:center 20%;filter:grayscale(14%);
+    box-shadow:0 0 0 1px var(--rule2),0 0 0 5px var(--surface),0 0 0 6px var(--kin-wash)}
+  .person .role{font-family:var(--mono);font-size:.63rem;letter-spacing:.14em;
+                color:var(--gold-dark);font-weight:700;margin-top:16px}
+  .person b{display:block;font-family:var(--display);font-size:1.05rem;margin-top:5px}
+  .person ul{margin-top:13px;text-align:left;display:flex;flex-direction:column;gap:6px;width:100%}
+  .person li{font-size:.78rem;line-height:1.7;color:var(--ink2);padding-left:.85em;position:relative}
+  .person li::before{content:'·';position:absolute;left:0;color:var(--gold);font-weight:700}
+
+  /* ── 対象 ── */
+  .fit{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);
+       border:1px solid var(--rule);margin-top:26px}
+  .fcol{background:var(--surface);padding:24px 22px}
+  .fcol h4{margin-bottom:12px;color:var(--gold-dark)}
+  .fcol ul{display:flex;flex-direction:column;gap:7px}
+  .fcol li{font-size:.87rem;line-height:1.75;padding-left:1.1em;position:relative}
+  .fcol li::before{content:'✓';position:absolute;left:0;color:var(--gold-dark)}
+  @media (max-width:640px){ .fit{grid-template-columns:1fr} }
+
+  /* ── 実績 ── */
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-top:26px}
+  .stat{background:var(--surface);border:1px solid var(--rule);padding:22px 20px}
+  .stat .num{display:block;font-family:var(--display);font-size:1.8rem;color:var(--gold-dark);line-height:1.2}
+  .stat .cap{font-size:.83rem;color:var(--ink2)}
+  .logos{display:grid;grid-template-columns:repeat(auto-fill,minmax(116px,1fr));gap:1px;
+         background:var(--rule);border:1px solid var(--rule);margin-top:24px}
+  .logos img{background:#fff;padding:15px 13px;width:100%;height:70px;object-fit:contain}
+
+  /* ── 関連サービス ── */
+  .rel{display:flex;flex-direction:column;gap:1px;background:var(--rule);
+       border:1px solid var(--rule);margin-top:24px}
+  .rel-item{background:var(--surface);padding:20px 22px}
+  .rel-item dt{font-family:var(--display);font-weight:600;font-size:1rem;margin-bottom:5px}
+  .rel-item dt a{color:var(--gold-dark);text-decoration:none;border-bottom:1px solid currentColor}
+  .rel-item dd{font-size:.86rem;color:var(--ink2);line-height:1.8}
+
+  /* ── 最終CTA ── */
+  .final{text-align:center}
+  .final h2{color:#fff}
+  .final p{color:rgba(255,255,255,.86);margin:0 auto;max-width:56ch}
+  .final .btns{justify-content:center}
+  .final .cta-main{padding:17px 40px;font-size:1.06rem}
+
+  /* ── 運営 ── */
+  .company{font-size:.86rem;color:var(--ink2);line-height:2.05;margin-top:20px}
+  .company b{font-family:var(--display);color:var(--ink)}
+  .foot{margin-top:28px;padding-top:22px;border-top:1px solid var(--rule);
+        font-size:.8rem;color:var(--ink3);line-height:1.9}
+  .foot a{color:var(--gold-dark);text-decoration:none;border-bottom:1px solid currentColor}
+  @media (prefers-reduced-motion:reduce){ *{transition:none!important;scroll-behavior:auto!important} }
+</style>
+
+<!-- 2026-09-13 追記：不足していた canonical / OGP / favicon -->
+<meta property="og:locale" content="ja_JP">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script src=/_cv/cv.js?v=20261105-capd data-ga=G-V0HT30LBNJ defer></script></head>
+<body>
+
+<!-- ═══ ヒーロー ═══ -->
+<section class="hero">
+  <div class="hero__bg" role="presentation"></div>
+  <div class="hero__ov" role="presentation"></div>
+  <div class="hero__in">
+    <div class="kicker">経営者・士業の方向け ── 株式会社クローバ経営研究所</div>
+    <h1>マンダラ経営実践塾</h1>
+    <div class="tag">計画を9マスで描き、AIで毎月まわす。</div>
+    <p class="lede">
+      1979年に生まれたマンダラチャートで経営の型を整え、AIで実務を動かします。
+      計画を立てて終わり、にはしません。
+    </p>
+    <div class="facts">
+      <div class="fact"><b>19,800円</b>／月（税込）</div>
+      <div class="fact"><b>毎週火曜</b>12:30〜13:50</div>
+      <div class="fact"><b>1社3名</b>まで参加OK</div>
+      <div class="fact"><b>7日間</b>無料で体験できます</div>
+    </div>
+    <div class="btns">
+      <a class="cta-main" href="https://docs.google.com/forms/d/e/1FAIpQLSdc4Y5BcL867eMr5dVbvW2DgFE5mCwq2ciQABV7LInDVGhZdQ/viewform" target="_blank" rel="noopener">7日間の無料体験に申し込む</a>
+      <a class="cta-sub" href="#price">料金と中身を見る</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ お悩み ═══ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">よくあるお悩み</div>
+    <h2>AIは気になる。でも、手が止まっている。</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="img/problem1.jpg" alt="腕時計を確認する経営者" loading="lazy">
+        <div class="body"><b>時間がない</b><span>新しいことを追いかける余裕がない。動画を何本も見ていられない。</span></div>
+      </div>
+      <div class="card">
+        <img src="img/problem2.jpg" alt="AI資料を前に考える経営者" loading="lazy">
+        <div class="body"><b>速すぎてついていけない</b><span>次々に新しいものが出てきて、もう追うのをやめてしまった。</span></div>
+      </div>
+      <div class="card">
+        <img src="img/problem3.jpg" alt="財務資料と電卓で検討する経営者" loading="lazy">
+        <div class="body"><b>費用対効果が見えない</b><span>ツールを契約しても、元が取れているのか分からない。</span></div>
+      </div>
+      <div class="card">
+        <img src="img/problem4.jpg" alt="付箋ボードを前に優先順位を考える経営者" loading="lazy">
+        <div class="body"><b>何から始めるべきか</b><span>情報が多すぎて、自社に必要なものが選べない。</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ Before / After ═══ -->
+<section class="sec alt">
+  <div class="wrap">
+    <div class="eyebrow">変わること</div>
+    <h2>「勉強する」から「業務が動く」へ</h2>
+    <div class="ba">
+      <figure>
+        <img src="img/before.jpg" alt="書類に埋もれた深夜のデスク" loading="lazy">
+        <div class="cap">
+          <div class="lbl">BEFORE</div>
+          <h3>情報だけが増えていく</h3>
+          <ul>
+            <li>調べても何も進まない</li>
+            <li>学ぶこと自体に時間を取られる</li>
+            <li>数字が出てくるのは1〜2か月後</li>
+            <li>手をつける順番が分からない</li>
+          </ul>
+        </div>
+      </figure>
+      <figure class="hi">
+        <img src="img/after.jpg" alt="ダッシュボードを見て話し合うチーム" loading="lazy">
+        <div class="cap">
+          <div class="lbl">AFTER</div>
+          <h3>数字を見ながら決められる</h3>
+          <ul>
+            <li>自社に必要なAIだけを使いこなす</li>
+            <li>会計・給与・評価の実務がそのまま動く</li>
+            <li>今の数字がいつでも見られる</li>
+            <li>次にやる1マスが決まっている</li>
+          </ul>
+        </div>
+      </figure>
+    </div>
+    <p style="margin-top:24px">
+      理由は単純です。<strong>この塾は、覚えるところで終わらせません。</strong>
+      その場で動くアプリとひな形を渡し、自社仕様に直すところまで一緒にやります。
+    </p>
+  </div>
+</section>
+
+<!-- ═══ はじめかた ═══ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">はじめかた</div>
+    <h2>いきなり決めなくて大丈夫です</h2>
+    <p class="lede">見る、試す、決める。3つの段階を用意しています。</p>
+    <div class="steps">
+      <div class="step">
+        <div class="lbl">STEP 1 ／ 見る</div>
+        <div class="when">火曜 12:30〜13:50</div>
+        <p>昼活（経営者・AI学習者の交流会）を見学。お申込みいただいた方に、参加用のURLをメールでお送りします。</p>
+        <div class="fee">無料（お申込みが必要です）</div>
+        <a class="go" href="https://docs.google.com/forms/d/e/1FAIpQLSdc4Y5BcL867eMr5dVbvW2DgFE5mCwq2ciQABV7LInDVGhZdQ/viewform" target="_blank" rel="noopener">見学を申し込む →</a>
+      </div>
+      <div class="step">
+        <div class="lbl">STEP 2 ／ 試す</div>
+        <div class="when">7日間 無料体験</div>
+        <p>経営理念（エリアA）の2マスを実際に進めます。マイページも発行され、昼活にも参加できます。2名までご一緒にどうぞ。</p>
+        <div class="fee">無料・費用はかかりません</div>
+        <a class="go" href="https://docs.google.com/forms/d/e/1FAIpQLSdc4Y5BcL867eMr5dVbvW2DgFE5mCwq2ciQABV7LInDVGhZdQ/viewform" target="_blank" rel="noopener">7日間ためす →</a>
+      </div>
+      <div class="step">
+        <div class="lbl">STEP 3 ／ 決める</div>
+        <div class="when">本会員</div>
+        <p>64クエストすべてと経営ツールがひらきます。月次のOKRチェックで、計画が引き出しに戻らないようにします。</p>
+        <div class="fee">月額 19,800円（1社3名まで）</div>
+        <a class="go" href="#join">入会の手続きへ →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 毎週やること ═══ -->
+<section class="sec alt">
+  <div class="wrap">
+    <div class="eyebrow">毎週やること</div>
+    <h2>火曜のお昼、80分</h2>
+    <p class="lede">毎週この2本立てです。出られない週はアーカイブで追いつけます。</p>
+    <figure class="fig wide">
+      <img src="img/hirukatsu.jpg" alt="オンラインで参加する経営者のみなさん" loading="lazy">
+      <figcaption>参加者は40代〜60代が中心。カメラオフでのご参加も歓迎です。</figcaption>
+    </figure>
+    <div class="tt">
+      <div class="tt-row">
+        <div class="tt-time">12:30</div>
+        <div class="tt-body">
+          <b>最新AI情報と、新しいアプリの紹介</b>
+          <span>
+            この1週間で何が変わったのか。経営者が知っておくべき新機能だけを絞ってお伝えします。
+            その週に追加されたアプリ・ひな形もここで配ります。
+            「結局どのAIを使えばいいのか」がその場で片づきます。
+          </span>
+        </div>
+      </div>
+      <div class="tt-row">
+        <div class="tt-time">13:00</div>
+        <div class="tt-body">
+          <b>ケーススタディ、または経営計画ツールの実習</b>
+          <span>
+            回によってどちらかを行います。ケーススタディでは、実際にAIを入れた会社の
+            うまくいったこと・詰まったことを共有し、出た相談をその場で解きます。
+            実習では、マンダラOKRやSWOTなどを参加者みんなで動かします。
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="margin-top:40px">これからの実習スケジュール（2026年）</h3>
+    <p>13:00からの実習は、8部門の4マス目をA→Hの順に進めます。</p>
+    <div class="tt">
+      <div class="tt-row">
+        <div class="tt-time">10/6</div>
+        <div class="tt-body"><b>A4｜NotebookLMで自社理念ノートを構築</b><span>経営理念</span></div>
+      </div>
+      <div class="tt-row">
+        <div class="tt-time">10/13</div>
+        <div class="tt-body"><b>B4｜社長専用Projectsの構築</b><span>社長方針</span></div>
+      </div>
+      <div class="tt-row">
+        <div class="tt-time">10/20</div>
+        <div class="tt-body"><b>C4｜月次財務ダッシュボード自動化</b><span>財務計画</span></div>
+      </div>
+      <div class="tt-row">
+        <div class="tt-time">10/27</div>
+        <div class="tt-body"><b>D4｜ペルソナをAIで深掘り</b><span>商品顧客開発</span></div>
+      </div>
+      <div class="tt-row">
+        <div class="tt-time">11/3</div>
+        <div class="tt-body"><b>文化の日のため休講です</b></div>
+      </div>
+      <div class="tt-row">
+        <div class="tt-time">11/10</div>
+        <div class="tt-body"><b>E4｜階層別アクションプランの作成（火の用心モデル）</b><span>組織計画</span></div>
+      </div>
+      <div class="tt-row">
+        <div class="tt-time">11/17</div>
+        <div class="tt-body"><b>F4｜新人オンボーディング設計</b><span>人財育成</span></div>
+      </div>
+      <div class="tt-row">
+        <div class="tt-time">11/24</div>
+        <div class="tt-body"><b>G4｜OKR週次サイクル＋音声日報＋CFR</b><span>予実管理</span></div>
+      </div>
+      <div class="tt-row">
+        <div class="tt-time">12/1</div>
+        <div class="tt-body"><b>H4｜社員からの改善提案を3つのイノベーション軸でAI分類</b><span>改善改革</span></div>
+      </div>
+    </div>
+    <p class="note">12/8からは5マス目（A5〜）に進みます。日程は変わることがあります。</p>
+    <p class="note">
+      扱う道具は Gemini・NotebookLM・スプレッドシートが中心です。特定のAIに縛りません。
+      ChatGPT・Gemini・Claude の中から、その業務にいちばん効くものを選べるようになります。
+      月1回は「その場でシステムを作ってしまう」回を設けています。
+    </p>
+  </div>
+</section>
+
+<!-- ═══ 実物（ダッシュボード） ═══ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">実物</div>
+    <h2>会社の数字が、人手不足でも止まらなくなる</h2>
+    <p class="lede">
+      たとえば経理ダッシュボード。請求・入金・未回収・月次予実が1画面に集まり、
+      社長がいつでも「今の数字」を見られる状態になります。
+    </p>
+    <figure class="fig wide" style="margin-top:26px">
+      <a class="zoom" href="img/dashboard.jpg" target="_blank" rel="noopener" aria-label="経理ダッシュボードの画像を拡大して見る">
+        <img src="img/dashboard.jpg" alt="経理ダッシュボードの画面。未回収総額2,588,000円・今期請求累計4,505,200円・要送信2件・入金消込7/16件と、月次予実管理のグラフと表" loading="lazy">
+      </a>
+      <figcaption>実際に動くデモです（架空のサンプルデータ）。未回収・請求・入金・月次予実が1画面に集まっています。画像はタップで拡大できます。</figcaption>
+    </figure>
+    <ul class="feat-list">
+      <li>未回収の総額・件数をその場で表示</li>
+      <li>送るべき請求書がひと目で分かる</li>
+      <li>銀行明細と入金の照合</li>
+      <li>月次の売上・経費・営業利益の予実管理</li>
+      <li>入金進捗率と延滞リストの自動更新</li>
+    </ul>
+
+    <h3 style="margin-top:44px">数字を見るだけで、終わらせない</h3>
+    <p class="lede">
+      同じダッシュボードの中に「経営マンダラ（9マス）」があります。
+      まん中に<strong>「来月の打ち手を、数字で決める」</strong>を置き、
+      まわりの8マスに着地見込み・前年同月比・資金繰り・未回収・粗利・固定費・請求もれ・来月の予算。
+      各マスの「質問」をコピーしてAIに貼るだけで、その場で最新の数字が返ってきます。
+    </p>
+    <p class="lede">
+      数字を眺めて終わるのではなく、<strong>9マスが社長に問いを投げてくる</strong>。
+      これがマンダラチャート®を経営に持ち込む、いちばん実務的なかたちです。毎月20日・30分で回ります。
+    </p>
+    <figure class="fig wide" style="margin-top:26px">
+      <a class="zoom" href="img/keiei-mandala9.jpg" target="_blank" rel="noopener" aria-label="経営マンダラ（9マス）の画像を拡大して見る">
+        <img src="img/keiei-mandala9.jpg" alt="経営マンダラ（9マス）の画面。中央に「来月の打ち手を、数字で決める」、周囲8マスに着地見込み・前年同月比・資金繰り予測・未回収の回収・粗利改善・固定費の点検・請求もれ点検・来月の予算が並び、各マスに「質問をコピー」ボタンがある" loading="lazy">
+      </a>
+      <figcaption>数字は架空のサンプル（デモ）です。本番は会計データがそのまま入ります。画像はタップで拡大できます。</figcaption>
+    </figure>
+
+    <div class="btns">
+      <a class="cta-sub" href="https://myhou.co.jp/keiri/demo/" target="_blank" rel="noopener">経理ダッシュボードのデモを触ってみる</a>
+    </div>
+    <p class="note">
+      架空のサンプルデータなので、そのまま操作できます。
+      会計ソフトとAIを直結させるため、余計な連携ツールの契約が不要になります。
+    </p>
+  </div>
+</section>
+
+<!-- ═══ 使えるもの ═══ -->
+<section class="sec alt">
+  <div class="wrap">
+    <div class="eyebrow">使えるもの</div>
+    <h2>実務アプリが、そのまま使い放題</h2>
+    <p class="lede">
+      塾で作った実務アプリは、会員なら自由に使えます。ノーコードなので、その場で自社仕様に直せます。
+    </p>
+    <div class="apps">
+      <div class="app"><b>経理ダッシュボード</b><span>請求・入金・未回収を1画面に</span></div>
+      <div class="app"><b>音声入力アプリ</b><span>話すだけで議事録・日報に</span></div>
+      <div class="app"><b>人事評価アプリ</b><span>評価の基準とブレをなくす</span></div>
+      <div class="app"><b>社内学習アプリ</b><span>教育をクエスト化して定着させる</span></div>
+      <div class="app"><b>給与計算アプリ</b><span>面倒な計算を自動化</span></div>
+      <div class="app"><b>勤怠管理</b><span>出退勤をかんたんに記録</span></div>
+      <div class="app"><b>有給申請</b><span>申請・承認をペーパーレスに</span></div>
+      <div class="app"><b>財務分析アプリ</b><span>数字を経営判断に活かす</span></div>
+      <div class="app"><b>マーケティングアプリ</b><span>集客・販促を仕組み化</span></div>
+      <div class="app"><b>マンダラチャートアプリ</b><span>考えを9マスで整理</span></div>
+      <div class="app"><b>マンダラOKR</b><span>目標を毎週まわす</span></div>
+    </div>
+    <p class="note">アンゾフ・PPM・カスタマージャーニーマップなども順次追加しています。</p>
+  </div>
+</section>
+
+<!-- ═══ 作り方 ═══ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">作り方</div>
+    <h2>ゼロから作らなくていい</h2>
+    <p class="lede">ひな形をダウンロードして、AIに読ませるだけ。あとは「うちはこうしたい」と伝えれば自社版ができます。</p>
+    <div class="flow">
+      <div class="fl">
+        <div class="no">STEP 1</div><b>ダウンロード</b>
+        <span>使いたいツールのひな形を選んで落とします。経理・音声入力・給与計算・人事評価・学習アプリなど。</span>
+      </div>
+      <div class="fl">
+        <div class="no">STEP 2</div><b>AIに読み込ませる</b>
+        <span>ChatGPT・Gemini・Claude に読ませて「自社の項目に変えて」と指示するだけ。コードの知識は要りません。</span>
+      </div>
+      <div class="fl">
+        <div class="no">STEP 3</div><b>使う、育てる</b>
+        <span>そのまま使ってもいいし、自社向けに育ててもいい。作る過程そのものが実践学習になります。</span>
+      </div>
+    </div>
+    <figure class="fig wide" style="margin-top:28px">
+      <img src="img/template-ai.jpg" alt="スプレッドシートとAIのチャットを並べて作業している手元" loading="lazy">
+      <figcaption>ひな形を開いて、隣のAIに「うちの項目に変えて」と伝えるだけ。</figcaption>
+    </figure>
+    <p style="margin-top:24px">
+      <strong>「使う」で終わらせないのが、この塾の狙いです。</strong>
+      ひな形を改造する経験を通して、社内のしくみを自分で作れる経営者になっていただきます。
+    </p>
+  </div>
+</section>
+
+<!-- ═══ マンダラの型 ═══ -->
+<section class="sec alt">
+  <div class="wrap">
+    <div class="eyebrow">経営計画の型</div>
+    <h2>まん中に「経営計画」、まわりに8つの部門</h2>
+    <p class="lede">
+      これがマンダラチャートです。中央に目的を置き、周囲8マスにそれを支える柱を並べます。
+      散らばっていた課題が、9マスに収まって見渡せるようになります。
+    </p>
+    <figure class="fig">
+      <img src="img/mandala9.jpg" alt="マンダラチャートの9マス。中央に経営計画、周囲に理念・リーダーシップ・財務・成長・チームづくり・人をつくる・目標管理(OKR)・改善" loading="lazy">
+    </figure>
+    <p class="m-caption">中央が目的、周囲8マスが支える柱。1979年に生まれた型です。</p>
+
+    <h3 style="margin-top:56px">8つの部門を、それぞれ8マスに割ります</h3>
+    <p class="lede">
+      8 × 8 ＝ 64のクエスト。1マスずつ実践して報告すると、進んだところが染まっていきます。
+      部門を制覇すると称号がつきます。
+    </p>
+    <figure class="fig wide">
+      <a class="zoom" href="img/mandala-okr81.jpg" target="_blank" rel="noopener" aria-label="法人のマンダラOKRの画像を拡大して見る">
+        <img src="img/mandala-okr81.jpg" alt="9×9・81マスの法人マンダラOKR。中央に法人の願い、周りにA〜Hの8つの目標、さらにその外側に各目標を支える8つの行動。各マスに担当者と達成度のバーが付いている" loading="lazy">
+      </a>
+      <figcaption>マンダラOKRの例（架空の介護法人）。各マスに担当者と進み具合が付きます。画像はタップで拡大できます。</figcaption>
+    </figure>
+    <div class="tcols" style="margin-top:34px">
+      <div class="tcol"><h4>理念・リーダーシップ</h4><ul><li>敬天愛人</li><li>世界一の覚悟</li></ul></div>
+      <div class="tcol"><h4>財務・成長</h4><ul><li>論語と算盤</li><li>レールを敷く者</li></ul></div>
+      <div class="tcol"><h4>チーム・人</h4><ul><li>文化醸成</li><li>人をつくる</li></ul></div>
+      <div class="tcol"><h4>目標管理・改善</h4><ul><li>挑戦と責任</li><li>苦集滅道</li></ul></div>
+    </div>
+    <p class="note">
+      財務の部門では、決算書のPDFをそのままAIに読ませて分析します。
+      会計ソフトと接続すれば、日々の数字を見ながら改善のマスを進められます。
+    </p>
+  </div>
+</section>
+
+<!-- ═══ 17ツール ═══ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">経営分析</div>
+    <h2>分析ツールは、これで足ります</h2>
+    <p class="lede">
+      SWOT、PPM、アンゾフ、ランチェスター、カスタマージャーニー、財務分析、予実管理──
+      経営者が知りたい手法が、すべて9マスに載った状態で用意されています。
+      AIが下書きするので「埋められない」が起きません。
+    </p>
+    <div class="tcols">
+      <div class="tcol"><h4>① 現状を知る</h4><ul>
+        <li>会社情報マンダラ</li><li>企業力分析マンダラ</li><li>社長方針マンダラ</li></ul></div>
+      <div class="tcol"><h4>② 数字をつかむ</h4><ul>
+        <li>財務分析（決算書PDF→重点KPI）</li><li>短期利益計画</li><li>3年後計画（中期計画）</li><li>月次財務ダッシュボード</li></ul></div>
+      <div class="tcol"><h4>③ 売り方を設計する</h4><ul>
+        <li>マーケティング基礎マンダラ</li><li>カスタマージャーニー・マンダラ</li><li>SWOTマンダラ（AI下書き）</li><li>商品戦略マンダラ（PPM×アンゾフ）</li><li>ランチェスター戦略マンダラ</li></ul></div>
+      <div class="tcol"><h4>④ 組織で回す</h4><ul>
+        <li>組織マンダラ</li><li>共育マンダラ（1on1・OKR連携）</li><li>週次予実ボード</li><li>経営コックピット</li></ul></div>
+    </div>
+    <p style="margin-top:24px">
+      <strong>分析して終わり、になりません。</strong>
+      すべての分析が9マスに集まり、そのまま毎週まわすOKRの目標に変わります。
+      分析から計画、実行、週次のふりかえりまでが一本につながります。
+      マンダラチャートの帳票と商標を持つ会社だからこそ、この形にできます。
+    </p>
+    <div class="btns">
+      <a class="cta-sub" href="https://mandalachart.jp/lp/kk/tool/" target="_blank" rel="noopener">17ツールの一覧を見てみる</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 料金 ═══ -->
+<section class="sec alt" id="price">
+  <div class="wrap">
+    <div class="eyebrow">料金</div>
+    <h2>サブスクリプションに一本化しました</h2>
+    <p class="lede">
+      以前は合宿型のセミナー受講料をいただいていましたが、月額に一本化しました。
+      初期費用はありません。
+    </p>
+    <div class="plans">
+      <div class="plan">
+        <h3>月払い</h3>
+        <div><span class="amount">19,800</span><span class="per"> 円／月（税込）</span></div>
+        <ul>
+          <li><strong>1社3名まで</strong>参加できます</li>
+          <li>毎週火曜の講座とアーカイブ視聴</li>
+          <li>実務アプリ・ひな形が使い放題</li>
+          <li>経営分析17ツールが使い放題</li>
+          <li>8部門64クエストで経営計画を仕上げる</li>
+          <li>月次OKRチェック</li>
+          <li>いつでも解約できます</li>
+        </ul>
+        <a class="cta-main" style="margin-top:auto;text-align:center" href="https://docs.google.com/forms/d/e/1FAIpQLSfxBinmqJsVbmc4NC4tLxJYC2Qev0Fi3_6X7HqxUdTqQHqcqw/viewform" target="_blank" rel="noopener">入会を申し込む</a>
+        <p class="note" style="margin-top:6px">お申込みにはメンバーIDが必要です。お持ちでない方は、先に7日間の無料体験へ。</p>
+      </div>
+      <div class="plan best">
+        <span class="badge">おすすめ</span>
+        <h3>年払い</h3>
+        <div><span class="amount">198,000</span><span class="per"> 円／年（税込）</span></div>
+        <div class="save">1年分を10ヶ月分の料金で（39,600円お得）</div>
+        <ul>
+          <li>月払いの内容はすべて含みます</li>
+          <li>経営計画は1年単位で回すもの。年払いのほうが計画と歩調が合います</li>
+        </ul>
+        <a class="cta-sub" style="margin-top:auto;text-align:center" href="https://buy.stripe.com/7sYdR94Jm92F4YO1Tf5os0i" target="_blank" rel="noopener">年払いを申し込む</a>
+        <p class="note" style="margin-top:6px">お申込みにはメンバーIDが必要です。お持ちでない方は、先に7日間の無料体験へ。請求書でのお支払いをご希望の方は <a href="mailto:info@mandalachart.jp" style="color:var(--gold-dark)">info@mandalachart.jp</a> までご相談ください。</p>
+      </div>
+    </div>
+
+    <h3 style="margin-top:52px">同じことを外に頼むと</h3>
+    <div class="tbl-scroll">
+      <table class="cmp">
+        <tr><th>項目</th><th>外注した場合の目安</th></tr>
+        <tr><td>経理ダッシュボードの開発</td><td>数十万〜数百万円</td></tr>
+        <tr><td>会計データ連携ツールの月額</td><td>月 数千〜数万円</td></tr>
+        <tr><td>給与計算・勤怠・人事評価システム</td><td>それぞれ別契約</td></tr>
+        <tr><td>経営分析・マーケ分析ツール 17種</td><td>コンサル費 別途</td></tr>
+        <tr><td>AI活用の社内研修（1回）</td><td>10万円〜</td></tr>
+        <tr class="total"><td>マンダラ経営実践塾（全部込み）</td><td>月額 19,800円</td></tr>
+      </table>
+    </div>
+    <p style="margin-top:20px">
+      <strong>1社3名まで参加できます。</strong>1人あたり月6,600円で、社内にAIを扱える人が3人育ちます。
+      アプリの内製のしかたも、他社の導入事例も、毎週そのまま持ち帰れます。
+    </p>
+
+    <!-- ─── 体験のあとの入会導線（2026-08-09 追加） ───
+         体験が終わった方に「次に何をすればいいか」が無かったため追加。
+         ★決済は Stripe の支払いリンク（2026-08-24 に Square から変更）。STEP 3 のボタンがそれ。
+           GAS側の同じリンクも 管理SS メニュー「ETA-T9 η 決済リンク設定」で
+           同じ Stripe のURLに揃えること（片方だけ直すとズレる）。
+           金額を変えるときは、この節・上の料金表・GASの ETA_PRICE_MONTHLY /
+           ETA_PRICE_YEARLY（MCQ110_eta_setup.gs）の3か所を必ず揃えること。 -->
+    <h3 id="join" style="margin-top:56px">体験のあと、入会するには</h3>
+    <p class="lede" style="margin-top:10px">
+      7日間の体験が終わったら、そのまま続けていただけます。
+      体験中に書いた経営理念マンダラは、消さずにそのまま引き継ぎます。
+    </p>
+    <div class="steps">
+      <div class="step">
+        <div class="lbl">STEP 1 ／ メンバーID</div>
+        <div class="when">お持ちの方はとばしてください</div>
+        <p>体験にお申込みいただいた方には、メンバーID（4桁の数字）とマイページのURLをメールでお送りしています。お手元のメールをご確認ください。</p>
+        <div class="fee">無料</div>
+        <a class="go" href="https://docs.google.com/forms/d/e/1FAIpQLSdc4Y5BcL867eMr5dVbvW2DgFE5mCwq2ciQABV7LInDVGhZdQ/viewform" target="_blank" rel="noopener">先に7日間ためす →</a>
+      </div>
+      <div class="step">
+        <div class="lbl">STEP 2 ／ 申し込む</div>
+        <div class="when">1分で終わります</div>
+        <p>申込フォームにメンバーIDとお名前を入れて送信してください。折り返し、お手続きのご案内をメールでお送りします。</p>
+        <div class="fee">月額 19,800円（1社3名まで）</div>
+        <a class="go" href="https://docs.google.com/forms/d/e/1FAIpQLSfxBinmqJsVbmc4NC4tLxJYC2Qev0Fi3_6X7HqxUdTqQHqcqw/viewform" target="_blank" rel="noopener">入会を申し込む →</a>
+      </div>
+      <div class="step">
+        <div class="lbl">STEP 3 ／ お支払い</div>
+        <div class="when">クレジットカード</div>
+        <p>お支払いが確認できしだい、残り7部門・全64クエストと経営ツールがひらきます。体験中の進捗はそのまま残ります。翌週の火曜から、本会員として合流してください。</p>
+        <div class="fee">月額 19,800円・毎月自動更新</div>
+        <a class="go" href="https://buy.stripe.com/28EeVdejW3Il9f4cxT5os05" target="_blank" rel="noopener">お支払いに進む →</a>
+      </div>
+    </div>
+    <p class="note" style="margin-top:18px">
+      体験期間が終わっても、昼活（毎週火曜 12:30〜13:50）とお便りは引き続きご参加いただけます。
+      年払い（198,000円・年1回の自動更新）をご希望の方は、料金のご案内から直接お申込みいただけます。
+      ご不明な点は <a href="mailto:info@mandalachart.jp" style="color:var(--gold-dark)">info@mandalachart.jp</a> までご相談ください。
+    </p>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">よくあるご質問</div>
+    <h2>決める前に、ここだけ</h2>
+    <div class="faq">
+      <details>
+        <summary>途中で解約できますか？</summary>
+        <div class="a">月払いはいつでも解約できます。違約金や最低利用期間はありません。年払いは1年ごとの自動更新です。次の更新日より前にお申し出いただければ、更新は止まります。</div>
+      </details>
+      <details>
+        <summary>3名は誰でもいいのですか？</summary>
+        <div class="a">同じ会社の方であれば、役員でも実務担当者でも構いません。社長おひとりで参加されるより、経理や総務の方とご一緒のほうが実務が動きます。体験のときは2名までご参加いただけます。</div>
+      </details>
+      <details>
+        <summary>火曜のお昼に出られない週があります。</summary>
+        <div class="a">全回アーカイブを残しています。会員のあいだは、過去の回もいつでも見返していただけます。その週に配ったひな形も後から取得できます。</div>
+      </details>
+      <details>
+        <summary>パソコンが苦手でも大丈夫ですか？</summary>
+        <div class="a">プログラミングの知識は要りません。ひな形をAIに読ませて指示するだけの作り方をお伝えします。参加者の平均年齢は55〜60歳です。</div>
+      </details>
+      <details>
+        <summary>経営計画は本当に作り終わりますか？</summary>
+        <div class="a">1マスずつ進めて報告する形なので、少しずつ形になっていきます。月次のOKRチェックがあるので、作ったあとに引き出しへ戻ることを防げます。</div>
+      </details>
+      <details>
+        <summary>領収書は出ますか？ 経費で入れられますか？</summary>
+        <div class="a">領収書を発行しています。研修費・教育費として処理いただけます。ご不明な点はお問い合わせください。</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 講師 ═══ -->
+<section class="sec alt">
+  <div class="wrap">
+    <div class="eyebrow">教える人</div>
+    <h2>講師とスタッフ</h2>
+    <div class="people">
+      <div class="person">
+        <img class="avatar" src="img/instructor_matsuyama.jpg" alt="松山 将三郎" loading="lazy" width="106" height="106">
+        <div class="role">AI SUPPORTER</div><b>松山 将三郎</b>
+        <ul>
+          <li>日経BP「ChatGPTで経営支援 強い組織の築き方」共著</li>
+          <li>日本実業出版社「NotebookLM徹底活用術」共著（2026年1月）</li>
+          <li>毎朝20名前後の経営者・実務家にAIを教えています</li>
+          <li>マンダラチャートのAI活用・プロデュース</li>
+        </ul>
+      </div>
+      <div class="person">
+        <img class="avatar" src="img/staff_sano.jpg" alt="佐野 元洋 氏" loading="lazy" width="106" height="106">
+        <div class="role">MANAGER</div><b>佐野 元洋 氏</b>
+        <ul>
+          <li>かなえ経営株式会社 代表取締役</li>
+          <li>税理士法人トレイス 税理士</li>
+          <li>西日本で唯一の税理士＆マンダラチャート認定講師</li>
+          <li>経営計画の作成実績100社以上</li>
+        </ul>
+      </div>
+      <div class="person">
+        <img class="avatar" src="img/instructor_koto.jpg" alt="コトウ ユウキ 氏" loading="lazy" width="106" height="106">
+        <div class="role">CERTIFIED TRAINER</div><b>コトウ ユウキ 氏</b>
+        <ul>
+          <li>株式会社cozcic 代表取締役／株式会社Rodisana 取締役COO</li>
+          <li>一般社団法人マンダラチャート協会 認定トレーナー</li>
+          <li>一般社団法人日本中小企業経営者支援協会 副代表理事</li>
+          <li>東京中小企業家同友会 渋谷支部長。3社の経営に携わりながら実践指導を担当</li>
+        </ul>
+      </div>
+      <div class="person">
+        <img class="avatar" src="img/staff_seki.jpg" alt="関 和久 氏" loading="lazy" width="106" height="106">
+        <div class="role">FACILITATOR</div><b>関 和久 氏</b>
+        <ul>
+          <li>株式会社CXO Agency 代表</li>
+          <li>受講者代表として「分かるまで質問し続ける」役</li>
+        </ul>
+      </div>
+      <div class="person">
+        <img class="avatar" src="img/staff_toyo.jpg" alt="豊 政茂 氏" loading="lazy" width="106" height="106">
+        <div class="role">FACILITATOR</div><b>豊 政茂 氏</b>
+        <ul>
+          <li>TS経営コンサルティング／豊政社会保険労務士事務所 代表</li>
+          <li>受講者代表として「分かるまで質問し続ける」役</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 対象 ═══ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">対象</div>
+    <h2>こんな方に向いています</h2>
+    <div class="fit">
+      <div class="fcol">
+        <h4>対象となる方</h4>
+        <ul>
+          <li>経営者・経営幹部（40代〜60代）</li>
+          <li>中小企業診断士</li>
+          <li>社会保険労務士・税理士</li>
+          <li>司法書士・行政書士</li>
+          <li>経営コンサルタント</li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <h4>とくに向いている方</h4>
+        <ul>
+          <li>早く成果を出したい</li>
+          <li>給与計算・勤怠・財務などの実務を軽くしたい</li>
+          <li>自社用のアプリをノーコードで持ちたい</li>
+          <li>どのAIを使えばいいかを知りたい</li>
+          <li>社内でAIを導入し、内製する予定がある</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ 実績 ═══ -->
+<section class="sec alt">
+  <div class="wrap">
+    <div class="eyebrow">実績</div>
+    <h2>47年の経営コンサルティングと、AIの実装力</h2>
+    <div class="stats">
+      <div class="stat"><span class="num">1979年</span><span class="cap">マンダラチャート開発</span></div>
+      <div class="stat"><span class="num">60社超</span><span class="cap">AI・DX導入支援</span></div>
+      <div class="stat"><span class="num">3,800万円超</span><span class="cap">改善効果（累計）</span></div>
+    </div>
+    <h3 style="margin-top:42px">導入・登壇実績（一部）</h3>
+    <div class="logos">
+      <img src="https://mandalachart.jp/wp/wp-content/uploads/2024/10/au-1.png" alt="au" loading="lazy">
+      <img src="https://mandalachart.jp/wp/wp-content/uploads/2024/10/itouen.png" alt="伊藤園" loading="lazy">
+      <img src="https://mandalachart.jp/wp/wp-content/uploads/2022/11/jisseki_daikin.png" alt="DAIKIN" loading="lazy">
+      <img src="https://mandalachart.jp/wp/wp-content/uploads/2022/11/jisseki_tdk.png" alt="TDK" loading="lazy">
+      <img src="https://mandalachart.jp/wp/wp-content/uploads/2022/11/jisseki_tkc.png" alt="TKC" loading="lazy">
+      <img src="https://mandalachart.jp/wp/wp-content/uploads/2022/11/jisseki_jfe.png" alt="JFE" loading="lazy">
+      <img src="https://mandalachart.jp/wp/wp-content/uploads/2022/11/jisseki_jci.png" alt="JCI" loading="lazy">
+      <img src="https://mandalachart.jp/wp/wp-content/uploads/2024/10/jera.png" alt="JERA" loading="lazy">
+      <img src="https://mandalachart.jp/wp/wp-content/uploads/2022/11/jisseki_rotary.png" alt="ロータリークラブ" loading="lazy">
+      <img src="https://mandalachart.jp/wp/wp-content/uploads/2022/11/jisseki_gourika.png" alt="日本経営合理化協会" loading="lazy">
+      <img src="https://mandalachart.jp/wp/wp-content/uploads/2022/11/jisseki_ootawarahoujinkai.png" alt="大田原法人会" loading="lazy">
+      <img src="https://mandalachart.jp/wp/wp-content/uploads/2022/11/jisseki_rinrihoujin.png" alt="倫理法人会" loading="lazy">
+      <img src="https://mandalachart.jp/wp/wp-content/uploads/2024/10/doyu.png" alt="同友会" loading="lazy">
+      <img src="https://mandalachart.jp/wp/wp-content/uploads/leaders/dcm.svg" alt="DCM" loading="lazy">
+    </div>
+    <p class="note">
+      製造・物流・小売・医療・介護福祉など、業種を問わず導入いただいています。
+      個別の導入事例は、ご相談の際にお伝えしています。
+    </p>
+  </div>
+</section>
+
+<!-- ═══ 関連サービス ═══ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">関連するサービス</div>
+    <h2>導入の深さに合わせて選べます</h2>
+    <dl class="rel">
+      <div class="rel-item">
+        <dt><a href="https://myhou.co.jp/wp/%e3%80%8ccaio%e4%bb%a3%e8%a1%8c%e8%87%aa%e8%b5%b0ai%e7%b5%84%e7%b9%94%e6%a7%8b%e7%af%89%e3%83%97%e3%83%a9%e3%83%b3%e3%80%8d%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6" target="_blank" rel="noopener">CAIO代行</a> ／ 月10万円（1年プラン）・月20万円（半年集中プラン）</dt>
+        <dd>社内にAI責任者を置く代わりに、当社が伴走して自走できるAI組織をつくります。</dd>
+      </div>
+      <div class="rel-item">
+        <dt><a href="https://myhou.co.jp/dx2026/" target="_blank" rel="noopener">地域DX・AI補助金活用プログラム</a> ／ 基本モジュール40万円〜</dt>
+        <dd>補助率50〜75%の各種補助金を活用した導入支援。40都道府県以上の補助金に対応しています。</dd>
+      </div>
+      <div class="rel-item">
+        <dt><a href="https://myhou.co.jp/wp/archives/1193" target="_blank" rel="noopener">AI・DXリスキリング研修</a> ／ 1名 28万円（税別・全4回12時間）</dt>
+        <dd>社員の方をまとめて育てる研修です。対面とオンラインを組み合わせて実施します。</dd>
+      </div>
+    </dl>
+  </div>
+</section>
+
+<!-- ═══ 最終CTA ═══ -->
+<section class="sec dark">
+  <div class="wrap final">
+    <h2>まずは7日間、中を見てから決めてください</h2>
+    <p>
+      パンフレットを読むより、実際の80分をご覧いただくのが早いと思います。
+      お申込みいただくと、昼活の参加URLと、経営理念（エリアA）の2マスをお送りします。
+      2名までご一緒にどうぞ。
+    </p>
+    <div class="btns">
+      <a class="cta-main" href="https://docs.google.com/forms/d/e/1FAIpQLSdc4Y5BcL867eMr5dVbvW2DgFE5mCwq2ciQABV7LInDVGhZdQ/viewform" target="_blank" rel="noopener">7日間の無料体験に申し込む</a>
+    </div>
+    <p style="font-size:.84rem;color:rgba(255,255,255,.68);margin-top:22px">
+      毎週火曜 12:30〜13:50 ／ オンライン（Google Meet）／ 費用は一切かかりません。<br>
+      参加用のURLは、お申込みいただいた方にメールでお送りします。
+      体験だけで終わっても構いません。カメラオフでのご参加も歓迎です。
+    </p>
+  </div>
+</section>
+
+<!-- ═══ 運営 ═══ -->
+<section class="sec">
+  <div class="wrap">
+    <div class="eyebrow">運営</div>
+    <div class="company">
+      <b>株式会社クローバ経営研究所</b><br>
+      設立 1980年3月22日／資本金 1,000万円<br>
+      〒131-0033 東京都墨田区向島3-28-13 203号／TEL 03-5637-8027<br>
+      代表取締役社長 松山 将三郎／取締役会長 松村 剛志<br>
+      マンダラチャート（登録商標）の開発・製造元。一般社団法人マンダラチャート協会 関連会社。
+    </div>
+    <div class="foot">
+      <a href="/">株式会社クローバ経営研究所 トップへ</a>
+      ／ <a href="https://mandalachart.jp/lp/corporate/#contact" target="_blank" rel="noopener">お問い合わせ</a><br>
+      マンダラチャート®・マンダラ手帳®は登録商標です。
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
